@@ -11,7 +11,7 @@ const Login = () => {
 
   return (
     <>
-      <Row style={{marginTop:"120px" , position: "relative"}}>
+      <Row style={{marginTop:"250px" , position: "relative"}}>
         <Col span={16} push={4}>
           <img
             src={img}
