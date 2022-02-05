@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { HashRouter as Router } from "react-router-dom";
-import "antd/dist/antd.dark.min.css";
-import "./index.css";
+
+import "./index.less";
 import App from "./App";
 
 ReactDOM.render(
