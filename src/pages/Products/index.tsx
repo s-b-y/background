@@ -19,8 +19,8 @@ import Modal from "antd/lib/modal/Modal";
 import { ColumnsType } from "antd/lib/table/interface";
 import { useEffect, useState } from "react";
 
-// 引入编辑器样式
-import "braft-editor/dist/index.css";
+
+
 import MyUpload from "../../components/MyUpload";
 import {
   loadModelsAPI,
@@ -43,7 +43,7 @@ function Products() {
   const [currentId, setCurrentId] = useState(-1);
   const [categories, setCategories] = useState<IProductData.Category[]>([]); // 商品分类
 
-  const [editorState, setEditorState] = useState<any>({}); // 富文本编辑器的数据
+
 
   const [editForm] = Form.useForm();
   useEffect(() => {
@@ -61,13 +61,11 @@ function Products() {
     if (!isShow) {
       setImageUrl("");
       setCurrentId(-1);
-      setEditorState(null);
+
       setQuery({});
     }
   }, [isShow]);
-  const handleEditorChange = (editorState: any) => {
-    setEditorState(editorState);
-  };
+ 
   const columns: ColumnsType<IProductData.Product> = [
     {
       title: "序号",
@@ -150,7 +148,8 @@ function Products() {
     },
   ];
   return (
-    <Card
+    <Card 
+    // style={{height:'100%'}}
       title="商品信息"
       extra={
         <>
@@ -176,6 +175,7 @@ function Products() {
         </Form.Item>
       </Form>
       <Table
+      // style={{overflow:'auto',height:'100%'}}
         rowKey="id"
         bordered={true}
         dataSource={list}
@@ -212,13 +212,13 @@ function Products() {
               await modifyById(currentId + "", {
                 ...v,
                 coverImage: imageUrl,
-                content: editorState.toHTML(),
+
               });
             } else {
               await insertModel({
                 ...v,
                 coverImage: imageUrl,
-                content: editorState.toHTML(),
+
               });
             }
             setIsShow(false);

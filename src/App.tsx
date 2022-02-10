@@ -7,7 +7,7 @@ import Main from './pages/Main';
 function App() {
   return <>
   <Switch>
-  <Route path="/login" exact>
+  <Route path="/" exact>
     <Login/>
   </Route>
   <Route path="/admin">

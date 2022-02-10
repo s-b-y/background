@@ -13,6 +13,7 @@ import Products from "./Products";
 import ProductCategories from "./Products/Categories";
 import Users from "./Users";
 import Orders from "./Users/Orders";
+import Login from "./Login"
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -21,7 +22,7 @@ function Main() {
   const [collapsed, serCollapsed] = useState(false);
   const{push} =useHistory();
   return (
-    <Layout style={{ minHeight: "100vh" }}>
+    <Layout style={{ maxHeight: "100vh" }}>
       <Sider
         collapsible
         collapsed={collapsed}
