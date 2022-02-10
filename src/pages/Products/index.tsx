@@ -149,7 +149,7 @@ function Products() {
   ];
   return (
     <Card 
-    // style={{height:'100%'}}
+    // style={{height:'100%',overflow}}
       title="商品信息"
       extra={
         <>
@@ -177,6 +177,7 @@ function Products() {
       <Table
       // style={{overflow:'auto',height:'100%'}}
         rowKey="id"
+        scroll={{y:400}}
         bordered={true}
         dataSource={list}
         columns={columns}

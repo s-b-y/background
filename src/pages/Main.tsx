@@ -52,7 +52,7 @@ function Main() {
           </Menu.Item>
         </Menu>
       </Sider>
-      <Layout className="site-layout" style={{ overflow: "auto" }}>
+      <Layout className="site-layout" >
         <Header className="site-layout-background" style={{ padding: 0 }} />
         <p style={{ fontWeight: "bolder", fontSize: "1.4rem" }}>
             BY智能云平台管理系统
